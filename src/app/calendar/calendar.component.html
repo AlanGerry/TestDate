@@ -1,0 +1,44 @@
+<div class="left-cal">
+    <div class='datapicker'>
+      <div class="datepickTitle">
+        <button (click)="behindyear()">behindyear</button>
+        <button (click)="behindMonth()">behindyear</button>
+        <span>{{today}}</span>
+        <button (click)="nextMonth()">nextmonth</button>
+        <button (click)="nextyear()">nextyear</button>
+      </div>
+
+      <table class="dateTable">
+        <tr>
+          <td *ngFor="let weekitem of weekday">
+            {{weekitem}}
+          </td>
+        </tr>
+        <tr>
+          <td *ngFor="let firstday of firstDatarows" (click)="clickDay($event)" [class.hover]="firstday==date&&finalday==month&&slectYear==year">
+            {{firstday }}
+          </td>
+        </tr>
+        <tr>
+          <td *ngFor="let seconday of secondDatarows" (click)="clickDay($event)" [class.hover]="seconday==date&&finalday==month&&slectYear==year">
+            {{seconday}}</td>
+        </tr>
+        <tr>
+          <td *ngFor="let threeday of threeDatarows" (click)="clickDay($event)" [class.hover]="threeday==date&&finalday==month&&slectYear==year">
+            {{threeday}}</td>
+        </tr>
+        <tr>
+          <td *ngFor="let fourday of fourDatarows" (click)="clickDay($event)" [class.hover]="fourday==date&&finalday==month&&slectYear==year">
+            {{fourday}}</td>
+        </tr>
+        <tr>
+          <td *ngFor="let fiveday of fiveDatarows" (click)="clickDay($event)" [class.hover]="fiveday==date&&finalday==month&&slectYear==year">
+            {{fiveday}}</td>
+        </tr>
+        <tr>
+          <td *ngFor="let sixday of sixDatarows" (click)="clickDay($event)" [class.hover]="sixday==date&&finalday==month&&slectYear==year">
+            {{sixday}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
